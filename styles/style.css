@@ -79,6 +79,7 @@ nav h1 {
 
 .banner-img {
     margin: 3% 12%;
+    padding-bottom: 3%;
 }
 
 .banner-img img {
@@ -86,20 +87,145 @@ nav h1 {
     height: 100%;
 }
 
+/* Main Style */
+main {
+    max-width: 1080px;
+    margin: 0 auto;
+}
 
+.team-container {
+    /* width: 75%; */
+    /* margin: 0 auto; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
+    /* gap: 5%; */
+}
 
+.team-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1%;
+}
+
+.team-content {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.quick-list {
+    color: #727272;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.of-our {
+    color: #131313;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.features {
+    color: #FF900E;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.team-content-description {
+    color: #727272;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+/* Some fact style */
+.fact-container{
+    margin-bottom: 5%;
+}
+.fact-text {
+    width: 50%;
+    margin-top: 5%;
+}
+
+.fact-title {
+    color: var(--Dark-01, #131313);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.fact-description {
+    color: var(--Dark-03, #727272);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding-top: 4%;
+}
+
+.fact-card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+
+.card {
+    border-radius: 0.5rem;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 1%;
+}
+
+.card-data {
+    color: var(--Dark-02, #424242);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.card-description {
+    color: var(--Dark-03, #727272);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
 
 /* Responsive Style */
 /* Smaller Devices */
 @media screen and (max-width:576px) {
-    nav{
+
+    nav,
+    .team-container,
+    .fact-card-container
+     {
         flex-direction: column;
     }
-    
+
+    .team-img-container {
+        grid-template-columns: 1fr;
+    }
+
+    .team-content {
+        text-align: center;
+        padding-top: 15%;
+    }
+    .fact-text{
+        margin: auto;
+        text-align: center;
+    }
+    .fact-card-container{
+        margin: 20%;
+        gap: 20px;
+    }
+
 }
+
 /* Medium Devices */
 @media screen and (min-width:576px) and (max-width:960px) {
-    nav{
+
+    nav,
+    .team-container {
         flex-direction: column;
+    }
+
+    .team-content {
+        text-align: center;
+        padding-top: 5%;
     }
 }
